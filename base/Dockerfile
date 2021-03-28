@@ -56,6 +56,9 @@ RUN cd /tmp/quartus && \
       --installdir $QUARTUS_INSTALLDIR \
       --accept_eula 1
 
+# install some extra stuff
+RUN apt-get install -y rsync
+
 # paths
 ENV QUARTUS_ROOTDIR $QUARTUS_INSTALLDIR/quartus
 ENV QSYS_ROOTDIR $QUARTUS_INSTALLDIR/quartus/sopc_builder/bin
